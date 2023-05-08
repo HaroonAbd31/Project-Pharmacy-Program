@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 #include<fstream>
 using namespace std;
 class customer
@@ -9,7 +9,7 @@ int age;
 string add;
 int p_no;
 public:
-void account_reg(string n, int a, string ad,int p )
+void account_reg(string n, int a, string ad,int p)
 {
     name="n";
     age=a;
@@ -18,6 +18,7 @@ void account_reg(string n, int a, string ad,int p )
 }
 friend void account_registration();
 };
+
 class seller
 {
 private:
@@ -27,7 +28,7 @@ public:
 void set()
 {
     id_no=1430;
-    name="miran";
+    name="Miran";
 }
 friend void seller_authentication();
 };
@@ -51,20 +52,20 @@ void seller_authentication()
 {
 string s_n;
 int s_id;
-  cout<<endl<<"Please enter your credentials:";
-  cout<<endl<<"Enter your name:";
+  cout<<"\nPlease enter your credentials:";
+  cout<<"\nEnter your name:";
   cin>>s_n;
-  cout<<endl<<"Enter your ID no:";
+  cout<<"\nEnter your ID no:";
   cin>>s_id;
   seller sd;
   if((s_n == sd.name) && (s_id == sd.id_no))
   {
-    cout<<endl<<"Login Successful!";
+    cout<<"\nLogin Successful!";
 
   }
   else
   {
-    cout<<"Incorrect Credentials!"<<endl<<" Program Terminated!";
+    cout<<"\nIncorrect Credentials...\nProgram Terminated!";
   }
 
 }
@@ -77,14 +78,14 @@ void account_registration()
     int ag;
     int pn;
     string address;
-    cout<<"Please register your account and you may proceed"<<endl;
-    cout<<" Please enter your Name: "<<endl;
+    cout<<"\nPlease register your account and you may proceed";
+    cout<<"\nPlease enter your Name: ";
     cin>>na;
-    cout<<endl<<"Enter Age: ";
+    cout<<"\nEnter Age: ";
     cin>>ag;
     cout<<"\nEnter Address: ";
     cin>>address;
-    cout<<"\nEnter your Phone no:";
+    cout<<"\nEnter your Phone no: ";
     cin>>pn;
     c.account_reg(na,ag,address,pn);
 }
